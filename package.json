@@ -26,8 +26,7 @@
     "strftime" : "latest",
     "async" : "latest",
     "@tars/stream" : "latest",
-    "@tars/rpc" : "latest",
-    "@tars/config-parser" : "latest"
+    "@tars/rpc" : "latest"
   },
   "peerDependencies": {
     "winston": ">=2.0.0"

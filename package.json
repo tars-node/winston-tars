@@ -1,0 +1,36 @@
+{
+  "name": "@tars/winston-tars",
+  "version": "1.0.0",
+  "description": "基于 winston 的扩展，以提供符合 TARS 框架的日志格式与输出",
+  "author": {
+    "name": "Superzheng",
+    "email": "superzheng@tencent.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.code.oa.com/taf/winston-taf.git"
+  },
+  "homepage": "http://git.oa.com/taf/winston-taf",
+  "bugs": {
+    "url": "http://git.oa.com/taf/winston-taf/issues"
+  },
+  "keywords": [
+    "winston-tars",
+    "winston-transport",
+    "transport",
+    "winston",
+    "node",
+    "tars"
+  ],
+  "dependencies" : {
+    "strftime" : "latest",
+    "async" : "latest",
+    "@tars/stream" : "latest",
+    "@tars/rpc" : "latest",
+    "@tars/config-parser" : "latest"
+  },
+  "peerDependencies": {
+    "winston": ">=2.0.0"
+  },
+  "license" : "BSD-3-Clause"
+}

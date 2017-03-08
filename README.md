@@ -17,7 +17,7 @@
 * __Formatter:__ 提供了符合TARS日志格式标准的内容格式化方法
 * __DateFormat:__ 定义了与时间相关日志滚动的处理方法
 
-__请注意：如果您的服务在 `TARS平台` 上运行，应直接使用 [@tars/logs](http://git.oa.com/tars/logs/) 模块，更为便捷__
+__请注意：如果您的服务在 `TARS平台` 上运行，应直接使用 [@tars/logs](https://github.com/tars-node/logs) 模块，更为便捷__
 
 ## 安装
 `npm install @tars/winston-tars`
@@ -64,7 +64,7 @@ var logger = new (winston.Logger)({
 
 输出日志的格式为：`日期 时间|PID|日志级别|文件名与行号|内容`
 
-其中 `文件名与行号` 部分可选（详见 [Metadata](http://git.oa.com/tars/winston-tars/tree/master#metadata) 节）
+其中 `文件名与行号` 部分可选（详见 [Metadata](https://github.com/tars-node/winston-tars#metadata) 节）
 
 ### 精简日志
 
@@ -219,7 +219,7 @@ process.on('exit', function() {
 });
 ``` 
 
-__如果服务通过 [node-agent](http://git.oa.com/tars/node-agent/tree/master "node-agent") （或在TARS平台）运行，则无需配置平台）运行，无需显式调用此模块。只需按照平时的写法 `console.[log|info|warn|error]` 即可正确的输出滚动日志__
+__如果服务通过 [node-agent](https://github.com/tars-node/node-agent "node-agent") （或在TARS平台）运行，则无需配置平台）运行，无需显式调用此模块。只需按照平时的写法 `console.[log|info|warn|error]` 即可正确的输出滚动日志__
 
 ## DateFormat
 

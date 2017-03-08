@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.code.oa.com/taf/winston-taf.git"
+    "url": "https://github.com/tars-node/winston-tars.git"
   },
-  "homepage": "http://git.oa.com/taf/winston-taf",
+  "homepage": "https://github.com/tars-node/winston-tars",
   "bugs": {
-    "url": "http://git.oa.com/taf/winston-taf/issues"
+    "url": "https://github.com/tars-node/winston-tars/issues"
   },
   "keywords": [
     "winston-tars",

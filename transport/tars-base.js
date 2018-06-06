@@ -112,7 +112,7 @@ TarsBase.prototype._write = function(data, callback) {
 TarsBase.prototype._checkfile = function(cb) {
 	this.emit('checkfile');
 	
-	fs.stat(this.filename, function(err, stats) {
+	fs.stat(this.filename, function(err) {
 		if (err) {
 			if (err.code !== 'ENOENT') {
 				cb(err);

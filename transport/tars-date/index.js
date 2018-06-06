@@ -65,7 +65,7 @@ TarsDate.prototype._checkfile = function(cb) {
 		this.filename = path.join(this._dirname, this._basename + '_' + strftime(this.options.format.logPattern, now) + this._extname);
 	}
 
-	fs.stat(this.filename, function(err, stats) {
+	fs.stat(this.filename, function(err) {
 		if (err && err.code !== 'ENOENT') {
 			cb(err);
 			return;

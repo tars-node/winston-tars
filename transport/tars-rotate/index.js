@@ -17,8 +17,6 @@
 'use strict';
 
 var util = require('util'),
-	fs = require('fs'),
-	path = require('path'),
 	cluster = require('cluster');
 
 var winston = require('winston');

@@ -23,5 +23,6 @@ exports.Formatter = require('./lib/formatter');
 exports.TarsBase = require('./transport/tars-base');
 exports.TarsRotate = require('./transport/tars-rotate/');
 exports.TarsDate = require('./transport/tars-date/');
+exports.TarsRemote = require('./transport/tars-remote/');
 
 exports.DateFormat = require('./transport/util/date-format');

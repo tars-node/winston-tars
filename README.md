@@ -2,11 +2,12 @@
 
 `@tars/winston-tars` 提供基于 [winston](https://github.com/flatiron/winston "winston") 的 TARS 扩展，以提供符合 TARS 框架的日志格式与输出。
 
-在 `@tars/winston-tars` 中提供3种 `transport` 对象：
+在 `@tars/winston-tars` 中提供4种 `transport` 对象：
 
 * __TarsBase:__ 提供符合 `TARS日志` 的基础类
 * __TarsRotate:__ 提供按大小输出的滚动日志
 * __TarsDate:__ 提供按日期输出的日志
+* __TafRemote:__ 输出至远程日志（tars.tarslog）
 
 并提供一种自定义日志级别：
 
@@ -274,6 +275,39 @@ __options__:
 * __formatter__: 定义日志内容格式化方法， *默认值为 Formatter.Simple()*  
 
 为了方便使用 TarsDate.FORMAT = DateFormat
+
+
+## TarsRemote
+
+提供远程日志的功能，会将日志输出至 `tars.tarslog.LogObj` 服务。
+
+请注意：这里并不是一收到日志就会发送，而是将日志整合在一起定时发送。
+
+``` js
+  var logger = new (winston.Logger)({
+    transports: [
+      new (winston.transports.TarsRemote)(options)
+    ]
+  });
+```
+
+__options__:  
+* __filename__: 远端日志文件名（不需要包含日期、路径等附加信息）  
+* __tarsConfig__: tars配置文件路径 或 已配置的 `@tars/utils.Config` 实例  
+* __tarsLogServant__: 远程日志服务 Servant Obj，*默认读取配置文件 `tars.tarslog.LogObj` 节*
+* __interval__: 发送日志的间隔， *默认值为 500ms*  
+* __format__: 创建新文件的间隔，为 DateFormat 对象， *默认值为 FORMAT.LogByDay*  
+* __hasSufix__: 日志文件名是否带.log后缀， *默认值为 true*  
+* __hasAppNamePrefix__: 是否允许框架在日志文件名上增加业务相关的标识， *默认值为 true*  
+* __concatStr__: 日志文件名中用户自定义字符与日期字符间的连接符， *默认值为 _*  
+* __separ__: 日志内容项之间的分隔符， *默认值为 |*  
+* __formatter__: 定义日志内容格式化方法， *默认值为 Formatter.Detail()*  
+
+_请注意：在 `TarsRemote` 中 `options.format` 不能为 `FORMAT.LogByCustom`_
+
+为了方便使用 TarsRemote.FORMAT = DateFormat
+
+__如果服务通过 [node-agent](https://github.com/tars-node/node-agent "node-agent") （或在TARS平台）运行，则无需配置 `options.tarsConfig` 项__
 
 
 ## Metadata

@@ -294,7 +294,7 @@ __options__:
 __options__:  
 * __filename__: 远端日志文件名（不需要包含日期、路径等附加信息）  
 * __tarsConfig__: tars配置文件路径 或 已配置的 `@tars/utils.Config` 实例  
-* __tarsLogServant__: 远程日志服务 Servant Obj，*默认读取配置文件 `tars.tarslog.LogObj` 节*
+* __tarsLogServant__: 远程日志服务 Servant Obj，*默认读取配置文件 `tars.application.server.log` 节*
 * __interval__: 发送日志的间隔， *默认值为 500ms*  
 * __format__: 创建新文件的间隔，为 DateFormat 对象， *默认值为 FORMAT.LogByDay*  
 * __hasSufix__: 日志文件名是否带.log后缀， *默认值为 true*  

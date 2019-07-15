@@ -1,6 +1,6 @@
 {
   "name": "@tars/winston-tars",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "基于 winston 的扩展，以提供符合 TARS 框架的日志格式与输出",
   "author": {
     "name": "Superzheng",
@@ -30,7 +30,7 @@
     "@tars/utils" : "latest"
   },
   "peerDependencies": {
-    "winston": ">=2.0.0"
+    "winston": ">=2.0.0 <3"
   },
   "license" : "BSD-3-Clause"
 }
